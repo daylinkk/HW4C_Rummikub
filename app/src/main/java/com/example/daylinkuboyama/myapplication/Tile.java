@@ -32,8 +32,9 @@ public class Tile {
     //4 tile colors
     public static final int BLUE = Color.argb(255,0,0,255);
     public static final int RED = Color.argb(255,255,0,0);
-    public static final int YELLOW = Color.argb(255,255,215,0);
+    public static final int YELLOW = Color.argb(255,0,0,0);
     public static final int GREEN = Color.argb(255,50,205,50);
+    public static final int TILECOLOR= Color.argb(255,255,250,250);
     //purpose of array is to assign numerical value to each color
     public static final int[] colorArray = {BLUE, RED, YELLOW, GREEN};
 
@@ -54,7 +55,7 @@ public class Tile {
     public void drawTile(Canvas c) {
         //fills and outlines tile color
         Paint tileColor = new Paint ();
-        tileColor.setARGB(255,255,250,250);
+        tileColor.setColor(TILECOLOR);
         Paint tileOutline = new Paint ();
         tileOutline.setStyle (Paint.Style.STROKE);
         c.drawRect(x,y,x+WIDTH,y+HEIGHT,tileColor);
